@@ -1,0 +1,12 @@
+.input-wrapper {
+    display: grid;
+    .label {
+        font-weight: bold;
+    }
+    .input-text {
+        height: 40px;
+        border: 1px solid #666;
+        border-radius: 8px;
+        max-width: 400px;
+    }
+}

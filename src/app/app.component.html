@@ -1,2 +1,7 @@
-<angular-signal-nx-welcome></angular-signal-nx-welcome>
-<router-outlet></router-outlet>
+<div class="input-wrapper">
+    <label class="label">Type your content</label>
+    <input class="input-text" (keyup)="inputChange($event)" type="text" />
+</div>
+<p>
+    {{signalContent()}}
+</p>

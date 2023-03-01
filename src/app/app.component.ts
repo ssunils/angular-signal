@@ -1,14 +1,17 @@
-import { NxWelcomeComponent } from './nx-welcome.component';
-import { RouterModule } from '@angular/router';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [],
   selector: 'angular-signal-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'angular-signal';
+
+  signalContent  = signal('hello');
+
+  inputChange(ev: KeyboardEvent) {
+    this.signalContent.update((e) => (ev.target as HTMLInputElement).value + e || '' );
+  }
 }
